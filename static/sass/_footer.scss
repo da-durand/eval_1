@@ -1,0 +1,21 @@
+footer{
+
+    padding: $padding-page;
+    background: $green;
+    color: white;
+
+    a{
+        color: white;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    .medias{
+        i{
+            margin: 0 .2em;
+        }
+    }
+
+}

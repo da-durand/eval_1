@@ -5,6 +5,10 @@ header {
     height: 2.5em; }
   header h1 {
     color: white; }
+  header nav button {
+    width: 30px;
+    height: 30px;
+    padding: 0; }
   header nav li {
     margin-right: 1em; }
     header nav li:nth-last-child(1) {
@@ -54,6 +58,17 @@ main {
           border-radius: 50%;
           color: white;
           border: 0; }
+
+footer {
+  padding: 2em 6em;
+  background: #27a844;
+  color: white; }
+  footer a {
+    color: white; }
+  footer ul {
+    list-style: none; }
+  footer .medias i {
+    margin: 0 .2em; }
 
 * {
   font-family: 'Alata', 'Kaushan Script', sans-serif; }
