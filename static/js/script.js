@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+
+    var voteList = []
+
     for (let i = 0; i < pictures.length; i++) {
 
         $(".pictures-container").append('<div class="col-3 card border-0" id="card-' + pictures[i].id + '">');
@@ -19,30 +22,41 @@ $(document).ready(function () {
 
         var nbVotes = pictures[i].votes;
 
-        $(votes).append('<button class="dislike" id="dislike-'+ pictures[i].id +'"><i class="fas fa-poo"></i></button>');
-        $(votes).append('<p id="nb-vote-'+ pictures[i].id +'">' + nbVotes + ' votes</p>');
-        $(votes).append('<button class="like" id="like-'+ pictures[i].id +'"><i class="fas fa-heart"></i></button>');
+        voteList.push({ "id": pictures[i].id, "vote": nbVotes });
+
+        $(votes).append('<button class="dislike" id="dislike-' + pictures[i].id + '"><i class="fas fa-poo"></i></button>');
+        $(votes).append('<p id="nb-vote-' + pictures[i].id + '">' + nbVotes + ' votes</p>');
+        $(votes).append('<button class="like" id="like-' + pictures[i].id + '"><i class="fas fa-heart"></i></button>');
 
     }
 
-    $(".dislike").click(function(){
-            var id = $(this).attr("id");
-            id = id.replace("dislike-", "")
-            
-            var votes = parseInt($("#nb-vote-"+id).html().replace(" votes", ""));
-            votes--;
+    sessionStorage.setItem("vote_list", JSON.stringify(voteList));
 
-            $("#nb-vote-"+id).html(votes + " votes")
+    $(".dislike").click(function () {
+        var id = $(this).attr("id");
+        id = id.replace("dislike-", "")
+
+        var votes = parseInt($("#nb-vote-" + id).html().replace(" votes", ""));
+        votes--;
+
+        $("#nb-vote-" + id).html(votes + " votes")
+
+        voteList[id - 1].vote = votes;
+        temp = JSON.parse(sessionStorage.getItem("vote_list", voteList));
+        temp[id -1].vote = votes;
+        sessionStorage.setItem("vote_list", JSON.stringify(temp));
     })
 
-    $(".like").click(function(){
+    $(".like").click(function () {
         var id = $(this).attr("id");
         id = id.replace("like-", "")
-        
-        var votes = parseInt($("#nb-vote-"+id).html().replace(" votes", ""));
+
+        var votes = parseInt($("#nb-vote-" + id).html().replace(" votes", ""));
         votes++;
 
-        $("#nb-vote-"+id).html(votes + " votes")
-})
+        $("#nb-vote-" + id).html(votes + " votes")
+        voteList[id].vote = votes;
+        sessionStorage.setItem("vote_list", JSON.stringify(voteList));
+    })
 
 })

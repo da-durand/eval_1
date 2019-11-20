@@ -4,18 +4,24 @@ $(document).ready(function () {
 
     var scoreList = []
 
+    var vote_list = JSON.parse(sessionStorage.getItem("vote_list"));
+
     // création de la liste des scores différents
 
-    for (let i = 0; i < pictures.length; i++) {
+    for (let i = 0; i < vote_list.length; i++) {
 
-        if (scoreList.includes(pictures[i].votes)) {
+        if (scoreList.includes(vote_list[i].vote)) {
 
         }
         else {
-            scoreList.push(pictures[i].votes);
+            scoreList.push(vote_list[i].vote);
         }
 
     }
+
+    console.log(scoreList);
+
+
 
     loop = true;
 
@@ -40,13 +46,20 @@ $(document).ready(function () {
 
     scoreList.reverse();
 
+    var podium = 1;
     for (let i = 0; i < scoreList.length; i++) {
 
         for (let j = 0; j < pictures.length; j++) {
 
             if (scoreList[i] == pictures[j].votes) {
 
-                $(".pictures-container").append('<div class="col-3 card border-0" id="card-' + pictures[j].id + '">');
+                if (podium < 4) {
+                    $(".pictures-container").append('<div class="col-4 card border-0" id="card-' + pictures[j].id + '">');
+                }
+                else {
+                    $(".pictures-container").append('<div class="col-3 card border-0" id="card-' + pictures[j].id + '">');
+                }
+                
 
                 var card = $('#card-' + pictures[j].id);
 
@@ -57,24 +70,36 @@ $(document).ready(function () {
 
                 $(container).append('<h3>' + pictures[j].title + '</h3>');
                 $(container).append('<p>' + pictures[j].subtile + '</p>');
-                $(container).append('<div class="votes d-flex justify-content-center align-items-center">');
 
-                var votes = $('#card-' + pictures[j].id + ' .votes');
+                var nbVotes = scoreList[i];
 
-                var nbVotes = pictures[j].votes;
+                if(podium == 1){
+                    $(container).append('<p class="win1 h1 py-3"><i class="fas fa-trophy"></i></p>')
+                    $(".win1").css("color", "yellow");
+                }
+                else if(podium == 2){
+                    $(container).append('<p class="win2 h1 py-3"><i class="fas fa-trophy"></i></p>')
+                    $(".win2").css("color", "gray");
+                }
+                else if(podium == 3){
+                    $(container).append('<p class="win3 h1 py-3"><i class="fas fa-trophy"></i></p>')
+                    $(".win3").css("color", "brown");
+                }
+                else{
+                    $(container).append('<p class="h2 py-3">' + (podium) + '</p>');
+                    $(".pictures-container .h2").css("color", "#28a745").css("font-style", "italic");
+                }
 
-                $(votes).append('<button class="dislike" id="dislike-' + pictures[j].id + '"><i class="fas fa-poo"></i></button>');
-                $(votes).append('<p id="nb-vote-' + pictures[j].id + '">' + nbVotes + ' votes</p>');
-                $(votes).append('<button class="like" id="like-' + pictures[j].id + '"><i class="fas fa-heart"></i></button>');
+                $(container).append('<p id="nb-vote-' + pictures[j].id + '">Score: ' + nbVotes + '</p>');
+
+                podium++;
+                console.log(podium);
+            
+
 
             }
 
         }
 
     }
-
-
-
-
-
 })
