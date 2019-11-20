@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,105 @@
     <link rel="stylesheet" href="./static/style.css">
     <title>Résultats</title>
 </head>
+
 <body>
-    
+    <div class="container-fluid p-0">
+
+        <!-- header -->
+
+        <header class="d-flex justify-content-between p-3">
+            <div class="title d-flex align-items-center">
+                <img src="./static/img/logo codi.png" alt="logo_codi">
+                <h1 class="h4 ml-2">Còdi'n Vote</h1>
+            </div>
+            <nav class="d-flex">
+                <ul class="d-flex list-unstyled m-0 align-items-center">
+                    <li>
+                        <a href="./index.html">Alban</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">Yann</a>
+                    </li>
+                    <li>
+                        <a href="./index.html">Thibault</a>
+                    </li>
+                    <li>
+                        <a href="./result.html">Result</a>
+                    </li>
+                </ul>
+                <div class="research">
+                    <input type="text" name="research" id="search-bar" placeholder="Rechercher">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- main -->
+
+        <main>
+            <h2>Result</h2>
+            <div class="row pictures-container">
+                <!-- insertion JS -->
+            </div>
+        </main>
+
+        <!-- footer -->
+
+        <footer>
+            <div class="row links d-flex justify-content-between">
+
+                <!-- listes de liens -->
+
+                <div class="col-3">
+                    <h3>| Quicks links</h3>
+                    <ul class="list-unstyled m'0">
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 1</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 2</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 3</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 4</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 5</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3>| Quicks links</h3>
+                    <ul class="list-unstyled m'0">
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 1</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 2</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 3</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 4</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 5</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h3>| Quicks links</h3>
+                    <ul class="list-unstyled m'0">
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 1</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 2</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 3</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 4</a></li>
+                        <li><a href="#"><i><i class="fas fa-angle-double-right"></i></i> Link 5</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- reseaux sociaux et mail -->
+
+            <div class="medias text-center my-3">
+                <a href="#"><i><i class="fab fa-facebook-f"></i></i></a>
+                <a href="#"><i><i class="fab fa-twitter"></i></i></a>
+                <a href="#"><i><i class="fab fa-instagram"></i></i></a>
+                <a href="#"><i><i class="fab fa-google-plus-g"></i></i></a>
+                <a href="#"><i><i class="fas fa-envelope"></i></i></a>
+            </div>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea cum voluptates nesciunt
+                error.</p>
+            <p class="text-center">© All right Reserved. Còdi'n Camp</p>
+        </footer>
+    </div>
 </body>
 <script src="./node_modules/jquery/dist/jquery.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./static/js/pictures.js"></script>
+<script src="./static/js/result.js"></script>
+
 </html>

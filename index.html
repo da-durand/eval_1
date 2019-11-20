@@ -13,6 +13,9 @@
 
 <body>
     <div class="container-fluid p-0">
+
+        <!-- header -->
+
         <header class="d-flex justify-content-between p-3">
             <div class="title d-flex align-items-center">
                 <img src="./static/img/logo codi.png" alt="logo_codi">
@@ -21,16 +24,16 @@
             <nav class="d-flex">
                 <ul class="d-flex list-unstyled m-0 align-items-center">
                     <li>
-                        <a href="#">Alban</a>
+                        <a href="./index.html">Alban</a>
                     </li>
                     <li>
-                        <a href="#">Yann</a>
+                        <a href="./index.html">Yann</a>
                     </li>
                     <li>
-                        <a href="#">Thibault</a>
+                        <a href="./index.html">Thibault</a>
                     </li>
                     <li>
-                        <a href="#">Result</a>
+                        <a href="./result.html">Result</a>
                     </li>
                 </ul>
                 <div class="research">
@@ -39,25 +42,23 @@
                 </div>
             </nav>
         </header>
+
+        <!-- main -->
+
         <main>
             <h2>Photo Contest</h2>
             <div class="row pictures-container">
-                <div class="col-3 card border-0" id="card-1">
-                    <img src="http://lorempixel.com/200/200/cats/Miaou1/" alt="picture" class="w-100">
-                    <div class="container">
-                        <h3>Image 1</h3>
-                        <p>Subtitle Image 1</p>
-                        <div class="votes d-flex justify-content-center align-items-center">
-                            <button class="dislike"><i class="fas fa-poo"></i></button>
-                            <p>8 votes</p>
-                            <button class="like"><i class="fas fa-heart"></i></button>
-                        </div>
-                    </div>
-                </div>
+                <!-- insertion JS -->
             </div>
         </main>
+
+        <!-- footer -->
+
         <footer>
             <div class="row links d-flex justify-content-between">
+
+                <!-- listes de liens -->
+
                 <div class="col-3">
                     <h3>| Quicks links</h3>
                     <ul class="list-unstyled m'0">
@@ -89,6 +90,9 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- reseaux sociaux et mail -->
+
             <div class="medias text-center my-3">
                 <a href="#"><i><i class="fab fa-facebook-f"></i></i></a>
                 <a href="#"><i><i class="fab fa-twitter"></i></i></a>
@@ -103,5 +107,6 @@
 </body>
 <script src="./node_modules/jquery/dist/jquery.js"></script>
 <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
+<script src="./static/js/pictures.js"></script>
+<script src="./static/js/script.js"></script>
 </html>
