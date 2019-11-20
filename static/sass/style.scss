@@ -1,0 +1,47 @@
+@import "varlist";
+
+*{
+    font-family: 'Alata', 'Kaushan Script', sans-serif;
+}
+
+header{
+
+    background: $green;
+
+    img{
+        width: $logo-size;
+        height: $logo-size;
+    }
+
+    h1{
+        color: white;
+    }
+
+    nav{
+        li{
+            margin-right: 1em;
+
+            &:nth-last-child(1){
+                margin-right: 3em;
+            }
+
+            a{
+                color: white;
+
+                &:hover{
+                    background: white;
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .research{
+            button{
+                background: rgba(0, 0, 0, 0);
+                border: 1px white solid;
+                color: white;
+            }
+        }
+    }
+}

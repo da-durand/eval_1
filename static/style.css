@@ -1,3 +1,26 @@
+* {
+  font-family: 'Alata', 'Kaushan Script', sans-serif; }
 
+header {
+  background: #27a844; }
+  header img {
+    width: 2.5em;
+    height: 2.5em; }
+  header h1 {
+    color: white; }
+  header nav li {
+    margin-right: 1em; }
+    header nav li:nth-last-child(1) {
+      margin-right: 3em; }
+    header nav li a {
+      color: white; }
+      header nav li a:hover {
+        background: white;
+        color: black;
+        text-decoration: none; }
+  header nav .research button {
+    background: rgba(0, 0, 0, 0);
+    border: 1px white solid;
+    color: white; }
 
 /*# sourceMappingURL=style.css.map */
