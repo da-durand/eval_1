@@ -1,6 +1,3 @@
-* {
-  font-family: 'Alata', 'Kaushan Script', sans-serif; }
-
 header {
   background: #27a844; }
   header img {
@@ -12,8 +9,10 @@ header {
     margin-right: 1em; }
     header nav li:nth-last-child(1) {
       margin-right: 3em; }
-    header nav li a {
+    header nav li:nth-of-type(1) a {
       color: white; }
+    header nav li a {
+      color: rgba(255, 255, 255, 0.534); }
       header nav li a:hover {
         background: white;
         color: black;
@@ -22,5 +21,41 @@ header {
     background: rgba(0, 0, 0, 0);
     border: 1px white solid;
     color: white; }
+
+main {
+  padding: 2em 6em;
+  background: #222222; }
+  main h2 {
+    background: #27a844;
+    color: white;
+    text-align: center;
+    padding: 0.5em 0; }
+  main .pictures-container {
+    padding: 1.5em 1.5em 0 1.5em; }
+    main .pictures-container .card {
+      padding: 1em;
+      background: #222222; }
+      main .pictures-container .card:nth-child(odd) .container {
+        background: black;
+        color: white; }
+      main .pictures-container .card .container {
+        padding: 1em 1em;
+        text-align: center;
+        background: white; }
+        main .pictures-container .card .container p {
+          margin: 0 1em; }
+        main .pictures-container .card .container .dislike {
+          background: red; }
+        main .pictures-container .card .container .like {
+          background: green; }
+        main .pictures-container .card .container button {
+          width: 2.5em;
+          height: 2.5em;
+          border-radius: 50%;
+          color: white;
+          border: 0; }
+
+* {
+  font-family: 'Alata', 'Kaushan Script', sans-serif; }
 
 /*# sourceMappingURL=style.css.map */

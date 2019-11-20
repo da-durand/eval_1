@@ -1,0 +1,56 @@
+main{
+
+    padding: 2em 6em;
+    background: #222222;
+
+    h2{
+        background: $green;
+        color: white;
+        text-align: center;
+        padding: 0.5em 0;
+    }
+
+    .pictures-container{
+        padding: 1.5em 1.5em 0 1.5em;
+
+        .card{
+            padding: 1em;
+            background: #222222;
+
+            &:nth-child(odd){
+                .container{
+                    background: black;
+                    color: white;
+                }
+            }
+            .container{
+                padding: 1em 1em;
+                text-align: center;
+
+                background: white;
+
+                p{
+                    margin: 0 1em;
+                }
+
+                .dislike{
+                    background: red;
+                }
+
+                .like{
+                    background: green;
+                }
+
+                button{
+                    width: $button-size;
+                    height: $button-size;
+                    border-radius: 50%;
+                    color: white;
+                    border: 0;
+                }
+
+            }
+        }
+    }
+
+}
